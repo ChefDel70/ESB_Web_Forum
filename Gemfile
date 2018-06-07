@@ -5,6 +5,9 @@ ruby '2.4.1'
 
 gem 'hirb'
 gem 'materialize-sass'
+gem 'figaro'
+gem 'omniauth'
+gem 'omniauth-twitter'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
