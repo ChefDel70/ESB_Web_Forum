@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ESBWebForum</title>
+    <title>Empire Strikes Back</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,8 +10,21 @@
   </head>
 
   <body>
+    <div class="navbar-fixed">
+      <nav class="grey darken-1">
+        <div class="nav-wrapper">
+          <div class="container">
+          <%= link_to "Empire Strikes Back", root_path, class: "brand-logo" %>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="https://swgoh.gg/g/2602/empire-strikes-back/">SW_GoH.gg</a></li>
+            <li><a href="https://www.reddit.com/r/SWGalaxyOfHeroes/">Reddit</a></li>
+          </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
     <div class="container">
       <%= yield %>
-    </div>  
+    </div>
   </body>
 </html>
