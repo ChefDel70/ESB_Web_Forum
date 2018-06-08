@@ -16,8 +16,14 @@
           <div class="container">
           <%= link_to "Empire Strikes Back", root_path, class: "brand-logo" %>
           <ul class="right hide-on-med-and-down">
-            <li><a href="https://swgoh.gg/g/2602/empire-strikes-back/">SW_GoH.gg</a></li>
-            <li><a href="https://www.reddit.com/r/SWGalaxyOfHeroes/">Reddit</a></li>
+            <% if user_logged_in? %>
+              <%= image_tag(current_user.image_url, width: 25, height: 25) %>
+              <li><%= link_to "Sign out", sign_out_path %></li>
+            <% else %>
+              <li><a href="/auth/twitter">Sign In w/ Twitter</a></li>
+            <% end %>
+              <li><a href="https://swgoh.gg/g/2602/empire-strikes-back/">SW_GoH.gg</a></li>
+              <li><a href="https://www.reddit.com/r/SWGalaxyOfHeroes/">Reddit</a></li>
           </ul>
           </div>
         </div>
